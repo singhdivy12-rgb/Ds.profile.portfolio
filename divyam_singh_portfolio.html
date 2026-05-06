@@ -1,1 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Divyam Singh — Senior Business Analyst</title>
+<meta name="description" content="Senior Business Analyst specializing in Finance, Data Governance & Regulatory Reporting. 5+ years at Citigroup and top firms."/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#0b1f35;
+  --teal:#0891b2;
+  --teal-dark:#0e7490;
+  --teal-glow:rgba(8,145,178,0.18);
+  --cyan:#22d3ee;
+  --amber:#f59e0b;
+  --emerald:#10b981;
+  --bg:#f0f9ff;
+  --surface:#ffffff;
+  --surface2:#e0f2fe;
+  --border:#bae6fd;
+  --text:#1e3a5f;
+  --muted:#5b8ab0;
+  --light-text:#94aec5;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;font-weight:400;line-height:1.65;padding-top:60px;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-thumb{background:var(--teal);border-radius:10px;}
 
+/* ════ TOPBAR ════ */
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:300;height:60px;
+  background:rgba(11,31,53,0.96);backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(8,145,178,0.3);
+  display:flex;align-items:center;justify-content:space-between;padding:0 3rem;
+}
+.tb-brand{display:flex;align-items:center;gap:0.9rem;}
+.tb-dot{width:34px;height:34px;background:linear-gradient(135deg,var(--teal),var(--cyan));border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:0.9rem;color:#fff;font-weight:600;}
+.tb-name{font-size:0.97rem;color:#fff;font-weight:600;letter-spacing:0.01em;}
+.tb-pipe{width:1px;height:16px;background:rgba(255,255,255,0.15);}
+.tb-role{font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--cyan);}
+.tb-nav{display:flex;align-items:center;gap:0.2rem;}
+.tb-nav a{padding:0.38rem 0.85rem;border-radius:6px;font-size:0.73rem;font-weight:500;color:rgba(255,255,255,0.48);text-decoration:none;transition:all 0.2s;}
+.tb-nav a:hover,.tb-nav a.active{color:#fff;background:rgba(8,145,178,0.22);}
+.tb-hire{font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.45rem 1.2rem;border-radius:6px;background:linear-gradient(135deg,var(--teal),var(--teal-dark));color:#fff;text-decoration:none;box-shadow:0 4px 14px rgba(8,145,178,0.35);transition:all 0.2s;}
+.tb-hire:hover{box-shadow:0 4px 20px rgba(8,145,178,0.55);transform:translateY(-1px);}
+
+/* ════ SCROLL PROGRESS ════ */
+.sprog{position:fixed;top:60px;left:0;right:0;z-index:299;height:3px;background:rgba(8,145,178,0.1);}
+.sprog-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--teal),var(--cyan),var(--amber));transition:width 0.08s linear;}
+
+/* ════ SHARE BANNER ════ */
+.share-banner{
+  background:linear-gradient(135deg,#0e7490 0%,#0891b2 50%,#06b6d4 100%);
+  padding:1.1rem 3rem;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  flex-wrap:wrap;
+}
+.share-banner-text{color:rgba(255,255,255,0.92);font-size:0.8rem;font-weight:500;}
+.share-banner-text strong{color:#fff;}
+.share-actions{display:flex;gap:0.7rem;flex-wrap:wrap;}
+.share-btn{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  padding:0.45rem 1rem;border-radius:6px;font-size:0.7rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;
+  text-decoration:none;cursor:pointer;border:none;transition:all 0.2s;white-space:nowrap;
+}
+.share-btn.github{background:rgba(255,255,255,0.18);color:#fff;border:1px solid rgba(255,255,255,0.3);}
+.share-btn.github:hover{background:rgba(255,255,255,0.28);}
+.share-btn.linkedin{background:#fff;color:var(--teal-dark);}
+.share-btn.linkedin:hover{background:#e0f2fe;}
+.share-btn.copy{background:rgba(255,255,255,0.12);color:#fff;border:1px solid rgba(255,255,255,0.25);}
+.share-btn.copy:hover{background:rgba(255,255,255,0.22);}
+
+/* ════ HERO + PHOTO ════ */
+.hero{
+  background:linear-gradient(135deg,#0b1f35 0%,#0e3a5f 60%,#0e4d6b 100%);
+  padding:4.5rem 5rem;position:relative;overflow:hidden;
+}
+.hero::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(8,145,178,0.18) 0%,transparent 65%);}
+.hero::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:60px;background:linear-gradient(to bottom,transparent,var(--bg));pointer-events:none;}
+
+.hero-grid{display:grid;grid-template-columns:1fr 260px;gap:4rem;align-items:center;position:relative;z-index:1;}
+
+.hero-badge{display:inline-flex;align-items:center;gap:0.55rem;background:rgba(34,211,238,0.12);border:1px solid rgba(34,211,238,0.3);color:var(--cyan);font-size:0.62rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;padding:0.38rem 0.9rem;border-radius:100px;margin-bottom:1.6rem;}
+.hero-badge span{width:7px;height:7px;border-radius:50%;background:var(--cyan);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.4;}}
+
+h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4vw,3.5rem);font-weight:600;color:#fff;line-height:1.08;margin-bottom:1.3rem;letter-spacing:-0.015em;}
+h1 em{font-style:italic;color:var(--cyan);}
+
+.hero-summary{font-size:0.91rem;line-height:1.85;color:rgba(255,255,255,0.58);max-width:540px;margin-bottom:2.5rem;font-weight:300;}
+
+.hero-stats{display:flex;gap:2.8rem;padding:1.8rem 0;border-top:1px solid rgba(255,255,255,0.1);}
+.stat-val{font-family:'Playfair Display',serif;font-size:2rem;color:#fff;font-weight:500;line-height:1;}
+.stat-val sup{font-size:1rem;color:var(--cyan);}
+.stat-lbl{font-size:0.61rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:0.28rem;}
+
+/* ════ PHOTO CARD ════ */
+.photo-card{
+  display:flex;flex-direction:column;align-items:center;gap:0.9rem;
+  background:rgba(255,255,255,0.05);border:1px solid rgba(8,145,178,0.3);
+  border-radius:16px;padding:1.5rem;
+}
+.photo-ring{
+  width:160px;height:160px;border-radius:50%;
+  background:linear-gradient(135deg,var(--teal),var(--cyan));
+  padding:3px;cursor:pointer;transition:box-shadow 0.2s;
+  box-shadow:0 0 0 0 rgba(8,145,178,0.4);
+}
+.photo-ring:hover{box-shadow:0 0 0 6px rgba(8,145,178,0.2);}
+.photo-inner{
+  width:100%;height:100%;border-radius:50%;
+  background:rgba(8,45,80,0.8);
+  overflow:hidden;display:flex;align-items:center;justify-content:center;
+}
+.photo-inner img{width:100%;height:100%;object-fit:cover;display:none;}
+.photo-icon{opacity:0.35;}
+.photo-name{font-family:'Playfair Display',serif;font-size:1rem;color:#fff;font-weight:500;text-align:center;}
+.photo-title{font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--cyan);text-align:center;}
+.upload-btn{
+  font-size:0.63rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+  padding:0.42rem 1.1rem;border-radius:6px;
+  background:rgba(8,145,178,0.2);border:1px solid rgba(8,145,178,0.45);
+  color:var(--cyan);cursor:pointer;transition:all 0.2s;white-space:nowrap;
+}
+.upload-btn:hover{background:rgba(8,145,178,0.35);border-color:var(--cyan);}
+#photo-input{display:none;}
+
+/* ════ TOOLS MARQUEE ════ */
+.tools-strip{
+  background:var(--ink);padding:1rem 0;overflow:hidden;
+  background:linear-gradient(90deg,#0b1f35,#0e3a5f,#0b1f35);
+}
+.marquee{display:flex;animation:slide 28s linear infinite;width:max-content;}
+@keyframes slide{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.tool-chip{display:flex;align-items:center;gap:0.55rem;padding:0 2rem;font-size:0.65rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);white-space:nowrap;border-right:1px solid rgba(255,255,255,0.06);}
+.tool-chip b{width:5px;height:5px;border-radius:50%;background:var(--teal);flex-shrink:0;display:inline-block;}
+
+/* ════ SECTIONS ════ */
+.section{padding:4.5rem 5rem;border-bottom:1px solid var(--border);}
+.section.alt{background:var(--surface);}
+.sec-hdr{display:flex;align-items:center;gap:1rem;margin-bottom:3rem;}
+.sec-num{font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--teal);font-weight:700;}
+.sec-ttl{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:600;color:var(--ink);letter-spacing:-0.01em;}
+.sec-line{flex:1;height:1px;background:var(--border);margin-left:0.5rem;}
+
+/* ════ ACCORDION ════ */
+.acc-item{border-bottom:1px solid var(--border);}
+.acc-item:first-child{border-top:1px solid var(--border);}
+.acc-hdr{
+  display:grid;grid-template-columns:185px 1fr auto;gap:2rem;
+  align-items:center;padding:1.5rem 0;cursor:pointer;
+  user-select:none;transition:background 0.15s;border-radius:4px;
+}
+.acc-hdr:hover{background:rgba(8,145,178,0.04);}
+.acc-co{font-family:'Playfair Display',serif;font-size:0.97rem;color:var(--ink);font-weight:600;margin-bottom:0.28rem;}
+.acc-period-tag{display:inline-block;font-size:0.59rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);background:rgba(8,145,178,0.1);padding:0.17rem 0.5rem;border-radius:3px;}
+.acc-loc{font-size:0.65rem;color:var(--muted);margin-top:0.22rem;}
+.acc-role-name{font-family:'Playfair Display',serif;font-size:1.12rem;color:var(--ink);font-weight:500;margin-bottom:0.2rem;}
+.acc-role-sub{font-size:0.73rem;color:var(--muted);}
+.acc-chev{width:28px;height:28px;border-radius:50%;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.25s;}
+.acc-item.open .acc-chev{background:var(--teal);border-color:var(--teal);}
+.acc-item.open .acc-chev svg{transform:rotate(180deg);}
+.acc-chev svg{transition:transform 0.3s;}
+.acc-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows 0.32s cubic-bezier(0.4,0,0.2,1);}
+.acc-item.open .acc-body{grid-template-rows:1fr;}
+.acc-inner{overflow:hidden;}
+.acc-content{padding:0 0 2rem;display:grid;grid-template-columns:185px 1fr;gap:2.5rem;}
+.acc-meta-date{font-size:0.7rem;color:var(--muted);}
+.acc-meta-type{font-size:0.68rem;color:var(--muted);margin-top:0.15rem;}
+.exp-pts{list-style:none;display:flex;flex-direction:column;gap:0.58rem;margin-bottom:1.2rem;}
+.exp-pts li{font-size:0.81rem;line-height:1.75;color:var(--text);padding-left:1.1rem;position:relative;}
+.exp-pts li::before{content:'';position:absolute;left:0;top:0.58em;width:5px;height:5px;border-radius:50%;background:var(--teal);}
+.exp-pts li strong{color:var(--ink);font-weight:600;}
+.tags{display:flex;flex-wrap:wrap;gap:0.35rem;}
+.tag{font-size:0.59rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:0.2rem 0.55rem;border-radius:4px;background:var(--surface2);color:var(--teal-dark);border:1px solid var(--border);}
+
+/* ════ SKILLS ════ */
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;}
+.sk-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.6rem;transition:border-color 0.2s,box-shadow 0.2s,transform 0.2s;}
+.sk-card:hover{border-color:var(--teal);box-shadow:0 4px 20px rgba(8,145,178,0.1);transform:translateY(-2px);}
+.sk-top{display:flex;align-items:center;gap:0.7rem;margin-bottom:0.95rem;padding-bottom:0.85rem;border-bottom:1px solid var(--border);}
+.sk-ico{width:32px;height:32px;background:linear-gradient(135deg,rgba(8,145,178,0.15),rgba(8,145,178,0.05));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0;}
+.sk-name{font-size:0.71rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--ink);}
+.pills{display:flex;flex-wrap:wrap;gap:0.32rem;}
+.pill{font-size:0.69rem;color:var(--muted);background:var(--bg);padding:0.2rem 0.58rem;border-radius:100px;border:1px solid var(--border);}
+
+/* ════ PROFICIENCY ════ */
+.prof-block{margin-top:2rem;padding:2.3rem;background:linear-gradient(135deg,var(--ink),#0e3a5f);border-radius:12px;border:1px solid rgba(8,145,178,0.2);}
+.prof-ttl{font-size:0.6rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:1.6rem;}
+.prof-row{display:grid;grid-template-columns:160px 1fr 38px;align-items:center;gap:1.2rem;margin-bottom:0.95rem;}
+.prof-lbl{font-size:0.72rem;color:rgba(255,255,255,0.65);font-weight:500;}
+.prof-trk{height:3px;background:rgba(255,255,255,0.08);border-radius:10px;overflow:hidden;}
+.prof-fill{height:100%;background:linear-gradient(90deg,var(--teal),var(--cyan));border-radius:10px;width:0;transition:width 1.4s cubic-bezier(0.4,0,0.2,1);}
+.prof-pct{font-size:0.62rem;color:var(--cyan);font-weight:700;text-align:right;}
+
+/* ════ EDUCATION ════ */
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;}
+.edu-card{border:1px solid var(--border);border-radius:10px;padding:2rem;position:relative;overflow:hidden;background:var(--surface);transition:border-color 0.2s,box-shadow 0.2s,transform 0.2s;}
+.edu-card:hover{border-color:var(--teal);box-shadow:0 4px 20px rgba(8,145,178,0.1);transform:translateY(-2px);}
+.edu-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--teal),var(--cyan));}
+.edu-type{font-size:0.61rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.4rem;margin-top:0.3rem;}
+.edu-deg{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:0.45rem;}
+.edu-sch{font-size:0.76rem;color:var(--text);font-weight:500;}
+.edu-loc{font-size:0.65rem;color:var(--muted);margin-top:0.15rem;}
+
+/* ════ CONTACT / CTA ════ */
+.contact-section{
+  background:linear-gradient(135deg,#0b1f35 0%,#0e4d6b 100%);
+  padding:5rem;
+  position:relative;overflow:hidden;
+}
+.contact-section::before{content:'';position:absolute;bottom:-200px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(8,145,178,0.15) 0%,transparent 65%);pointer-events:none;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative;z-index:1;}
+.contact-left h2{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:600;color:#fff;line-height:1.15;margin-bottom:1rem;}
+.contact-left h2 em{font-style:italic;color:var(--cyan);}
+.contact-left p{font-size:0.85rem;line-height:1.8;color:rgba(255,255,255,0.5);font-weight:300;margin-bottom:2rem;}
+.cta-row{display:flex;gap:1rem;flex-wrap:wrap;}
+.cta-primary{display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.6rem;border-radius:8px;background:linear-gradient(135deg,var(--teal),var(--teal-dark));color:#fff;font-size:0.75rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;text-decoration:none;box-shadow:0 4px 16px rgba(8,145,178,0.4);transition:all 0.2s;}
+.cta-primary:hover{box-shadow:0 4px 24px rgba(8,145,178,0.6);transform:translateY(-2px);}
+.cta-ghost{display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.4rem;border-radius:8px;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.75);font-size:0.75rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;}
+.cta-ghost:hover{border-color:var(--cyan);color:#fff;}
+
+.contact-right{display:flex;flex-direction:column;gap:0.85rem;}
+.ci{display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;transition:all 0.2s;}
+.ci:hover{background:rgba(8,145,178,0.15);border-color:rgba(8,145,178,0.4);}
+.ci-ico{width:36px;height:36px;background:rgba(8,145,178,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0;}
+.ci-lbl{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.28);font-weight:600;margin-bottom:0.1rem;}
+.ci-val{font-size:0.8rem;color:rgba(255,255,255,0.8);}
+
+/* ════ PUBLISH GUIDE ════ */
+.publish-section{
+  background:var(--surface);padding:4.5rem 5rem;border-top:1px solid var(--border);
+}
+.publish-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.5rem;}
+.pub-card{border:1px solid var(--border);border-radius:12px;padding:2rem;transition:border-color 0.2s,box-shadow 0.2s;}
+.pub-card:hover{border-color:var(--teal);box-shadow:0 4px 20px rgba(8,145,178,0.1);}
+.pub-header{display:flex;align-items:center;gap:0.8rem;margin-bottom:1.3rem;}
+.pub-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
+.pub-icon.gh{background:linear-gradient(135deg,#24292e,#40464e);}
+.pub-icon.li{background:linear-gradient(135deg,#0077b5,#00a0dc);}
+.pub-icon.share{background:linear-gradient(135deg,var(--teal),var(--cyan));}
+.pub-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:var(--ink);}
+.pub-subtitle{font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-top:0.1rem;}
+.pub-steps{display:flex;flex-direction:column;gap:0.65rem;}
+.step{display:flex;gap:0.85rem;align-items:flex-start;}
+.step-num{width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--cyan));display:flex;align-items:center;justify-content:center;font-size:0.6rem;font-weight:700;color:#fff;flex-shrink:0;margin-top:0.15rem;}
+.step-text{font-size:0.78rem;line-height:1.65;color:var(--text);}
+.step-text code{background:var(--surface2);border:1px solid var(--border);padding:0.1rem 0.35rem;border-radius:4px;font-size:0.72rem;color:var(--teal-dark);font-family:monospace;}
+.step-text a{color:var(--teal);text-decoration:none;font-weight:600;}
+.step-text a:hover{text-decoration:underline;}
+.copy-url-row{display:flex;align-items:center;gap:0.6rem;margin-top:0.8rem;padding:0.7rem 0.9rem;background:var(--surface2);border:1px solid var(--border);border-radius:6px;}
+.copy-url-text{font-size:0.72rem;color:var(--muted);font-family:monospace;flex:1;}
+.copy-url-btn{font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 0.7rem;border-radius:5px;background:var(--teal);color:#fff;border:none;cursor:pointer;transition:background 0.2s;white-space:nowrap;}
+.copy-url-btn:hover{background:var(--teal-dark);}
+.share-link-card{
+  grid-column:1/-1;
+  background:linear-gradient(135deg,rgba(8,145,178,0.08),rgba(34,211,238,0.06));
+  border:1px solid rgba(8,145,178,0.25);
+  border-radius:12px;padding:1.8rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;
+}
+.share-link-info h4{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--ink);font-weight:600;margin-bottom:0.3rem;}
+.share-link-info p{font-size:0.76rem;color:var(--muted);line-height:1.6;}
+.share-link-btns{display:flex;gap:0.7rem;flex-wrap:wrap;}
+.slb{display:inline-flex;align-items:center;gap:0.5rem;padding:0.5rem 1.1rem;border-radius:7px;font-size:0.69rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;cursor:pointer;border:none;}
+.slb.primary{background:linear-gradient(135deg,var(--teal),var(--teal-dark));color:#fff;box-shadow:0 3px 12px rgba(8,145,178,0.3);}
+.slb.primary:hover{box-shadow:0 3px 20px rgba(8,145,178,0.5);transform:translateY(-1px);}
+.slb.outline{background:transparent;border:1px solid var(--border);color:var(--teal);}
+.slb.outline:hover{border-color:var(--teal);background:rgba(8,145,178,0.06);}
+
+/* ════ FOOTER ════ */
+.footer{background:var(--ink);padding:1.5rem 5rem;display:flex;justify-content:space-between;align-items:center;}
+.footer-copy{font-size:0.62rem;color:rgba(255,255,255,0.22);letter-spacing:0.05em;}
+.footer-brand{font-family:'Playfair Display',serif;font-size:0.82rem;color:rgba(255,255,255,0.25);}
+
+/* ════ FADE ANIMATION ════ */
+.fade{opacity:0;transform:translateY(16px);transition:opacity 0.7s cubic-bezier(0.4,0,0.2,1),transform 0.7s cubic-bezier(0.4,0,0.2,1);}
+.fade.visible{opacity:1;transform:translateY(0);}
+
+/* ════ RESPONSIVE ════ */
+@media(max-width:1024px){
+  .tb-nav{display:none;}
+  .hero,.section,.contact-section,.publish-section,.footer{padding-left:2.5rem;padding-right:2.5rem;}
+  .hero-grid{grid-template-columns:1fr;}
+  .photo-card{display:none;}
+  .acc-hdr{grid-template-columns:140px 1fr auto;gap:1.5rem;}
+  .acc-content{grid-template-columns:1fr;}
+}
+@media(max-width:680px){
+  .skills-grid,.edu-grid,.contact-grid,.publish-grid{grid-template-columns:1fr;}
+  .hero-stats{gap:1.8rem;flex-wrap:wrap;}
+  .share-banner{padding:1rem 1.5rem;}
+  .topbar{padding:0 1.5rem;}
+  .tb-role,.tb-pipe{display:none;}
+  .share-link-card{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════ TOPBAR ══════ -->
+<header class="topbar">
+  <div class="tb-brand">
+    <div class="tb-dot">DS</div>
+    <span class="tb-name">Divyam Singh</span>
+    <div class="tb-pipe"></div>
+    <span class="tb-role">Finance &amp; Data Governance</span>
+  </div>
+  <nav class="tb-nav">
+    <a href="#hero" class="active">Overview</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#publish">Publish</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="mailto:divyamsinghcareer39@gmail.com" class="tb-hire">Hire Me</a>
+</header>
+
+<!-- ══════ SCROLL PROGRESS ══════ -->
+<div class="sprog"><div class="sprog-fill" id="sprogFill"></div></div>
+
+<!-- ══════ SHARE BANNER ══════ -->
+<div class="share-banner">
+  <div class="share-banner-text">🚀 <strong>Ready to share?</strong> Publish to GitHub Pages in 3 steps — then add the link to LinkedIn &amp; your resume</div>
+  <div class="share-actions">
+    <a href="https://github.com/new" target="_blank" class="share-btn github">⬆ GitHub Pages</a>
+    <a href="https://www.linkedin.com/in/" target="_blank" class="share-btn linkedin">🔗 LinkedIn Profile</a>
+    <button class="share-btn copy" onclick="copyPortfolioLink()">📋 Copy Link</button>
+  </div>
+</div>
+
+<!-- ══════ HERO ══════ -->
+<section class="hero" id="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-badge"><span></span>Open to New Opportunities</div>
+      <h1>Turning Financial Data<br>into <em>Governed Clarity.</em></h1>
+      <p class="hero-summary">Senior Business Analyst with 5+ years bridging financial operations, regulatory reporting, and enterprise data governance. I translate complexity into structured, traceable, and actionable solutions.</p>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-val">5<sup>+</sup></div>
+          <div class="stat-lbl">Years Experience</div>
+        </div>
+        <div>
+          <div class="stat-val">3</div>
+          <div class="stat-lbl">Enterprise Orgs</div>
+        </div>
+        <div>
+          <div class="stat-val">MS</div>
+          <div class="stat-lbl">Information Systems</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHOTO SECTION -->
+    <div class="photo-card">
+      <div class="photo-ring" onclick="document.getElementById('photo-input').click()" title="Click to upload your photo">
+        <div class="photo-inner">
+          <img id="photoImg" src="" alt="Divyam Singh"/>
+          <svg class="photo-icon" id="photoIcon" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+      </div>
+      <input type="file" id="photo-input" accept="image/*"/>
+      <div class="photo-name">Divyam Singh</div>
+      <div class="photo-title">Senior Business Analyst</div>
+      <label for="photo-input" class="upload-btn">📷 Upload Photo</label>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ TOOLS MARQUEE ══════ -->
+<div class="tools-strip">
+  <div class="marquee">
+    <div class="tool-chip"><b></b>SQL / T-SQL</div><div class="tool-chip"><b></b>Python · Pandas</div>
+    <div class="tool-chip"><b></b>Snowflake</div><div class="tool-chip"><b></b>Power BI · DAX</div>
+    <div class="tool-chip"><b></b>Tableau</div><div class="tool-chip"><b></b>Jira · Confluence</div>
+    <div class="tool-chip"><b></b>Azure DevOps</div><div class="tool-chip"><b></b>SSIS · SSRS</div>
+    <div class="tool-chip"><b></b>Looker Studio</div><div class="tool-chip"><b></b>MS Visio</div>
+    <div class="tool-chip"><b></b>Advanced Excel</div><div class="tool-chip"><b></b>Agile · Scrum</div>
+    <div class="tool-chip"><b></b>SQL / T-SQL</div><div class="tool-chip"><b></b>Python · Pandas</div>
+    <div class="tool-chip"><b></b>Snowflake</div><div class="tool-chip"><b></b>Power BI · DAX</div>
+    <div class="tool-chip"><b></b>Tableau</div><div class="tool-chip"><b></b>Jira · Confluence</div>
+    <div class="tool-chip"><b></b>Azure DevOps</div><div class="tool-chip"><b></b>SSIS · SSRS</div>
+    <div class="tool-chip"><b></b>Looker Studio</div><div class="tool-chip"><b></b>MS Visio</div>
+    <div class="tool-chip"><b></b>Advanced Excel</div><div class="tool-chip"><b></b>Agile · Scrum</div>
+  </div>
+</div>
+
+<!-- ══════ EXPERIENCE ══════ -->
+<section class="section alt" id="experience">
+  <div class="sec-hdr fade">
+    <span class="sec-num">01</span>
+    <span class="sec-ttl">Work Experience</span>
+    <div class="sec-line"></div>
+  </div>
+
+  <div class="acc-item open">
+    <div class="acc-hdr" onclick="toggleAcc(this)">
+      <div><div class="acc-co">Citigroup</div><div class="acc-period-tag">Jan 2024 — Present</div><div class="acc-loc">USA</div></div>
+      <div><div class="acc-role-name">Senior Business Analyst / Product Owner</div><div class="acc-role-sub">Financial Operations · Data Governance · Regulatory Reporting</div></div>
+      <div class="acc-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></div>
+    </div>
+    <div class="acc-body"><div class="acc-inner"><div class="acc-content">
+      <div><div class="acc-meta-date">January 2024 — Present</div><div class="acc-meta-type">Full-time · USA</div></div>
+      <div>
+        <ul class="exp-pts">
+          <li>Led end-to-end business process design across financial operations, accounting, and trade management — converting fragmented workflows into governed, auditable systems.</li>
+          <li>Built and maintained the enterprise data dictionary; established quality controls, lineage tracking, and feed governance to meet full regulatory traceability requirements.</li>
+          <li>Performed advanced T-SQL analysis to surface data integrity gaps, reconcile discrepancies, and align technical implementation with business requirements.</li>
+          <li>Drove UAT from planning through sign-off — authoring test scenarios, tracking metrics, and keeping IT and business stakeholders aligned at every milestone.</li>
+          <li>Managed cross-functional project delivery from initiation through BAU handoff; presented structured risk and dependency updates directly to senior leadership.</li>
+          <li>Designed SSIS ETL pipelines and automated SSRS reporting; mentored junior analysts on data governance and Agile documentation best practices.</li>
+        </ul>
+        <div class="tags"><span class="tag">Data Governance</span><span class="tag">T-SQL</span><span class="tag">SSIS/SSRS</span><span class="tag">UAT</span><span class="tag">Regulatory Reporting</span><span class="tag">Agile</span></div>
+      </div>
+    </div></div></div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-hdr" onclick="toggleAcc(this)">
+      <div><div class="acc-co">Course 5 Intelligence</div><div class="acc-period-tag">Mar 2021 — Jul 2022</div><div class="acc-loc">India</div></div>
+      <div><div class="acc-role-name">Data Analyst</div><div class="acc-role-sub">SQL · Python · BI Dashboards · Financial Forecasting</div></div>
+      <div class="acc-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1d7a8a" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></div>
+    </div>
+    <div class="acc-body"><div class="acc-inner"><div class="acc-content">
+      <div><div class="acc-meta-date">March 2021 — July 2022</div><div class="acc-meta-type">Full-time · India</div></div>
+      <div>
+        <ul class="exp-pts">
+          <li>Assessed and reconciled <strong>2M+ record datasets</strong> in SQL and Snowflake — resolving integrity issues contributing to <strong>$300K in documented cost savings.</strong></li>
+          <li>Built financial forecasting models in Python (Pandas) and Excel, improving forecast accuracy and cutting reporting cycle time.</li>
+          <li>Delivered Tableau and Power BI dashboards consolidating KPI reporting across business units into a single trusted source of truth.</li>
+          <li>Automated recurring reporting workflows in SQL and Excel, eliminating manual effort and reducing turnaround time.</li>
+        </ul>
+        <div class="tags"><span class="tag">SQL</span><span class="tag">Snowflake</span><span class="tag">Python</span><span class="tag">Tableau</span><span class="tag">Power BI</span><span class="tag">Forecasting</span></div>
+      </div>
+    </div></div></div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-hdr" onclick="toggleAcc(this)">
+      <div><div class="acc-co">Zensar Technologies</div><div class="acc-period-tag">Jul 2020 — Mar 2021</div><div class="acc-loc">India</div></div>
+      <div><div class="acc-role-name">Business Analyst</div><div class="acc-role-sub">KYC/AML · Process Design · UAT · KPI Dashboards</div></div>
+      <div class="acc-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1d7a8a" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></div>
+    </div>
+    <div class="acc-body"><div class="acc-inner"><div class="acc-content">
+      <div><div class="acc-meta-date">July 2020 — March 2021</div><div class="acc-meta-type">Full-time · India</div></div>
+      <div>
+        <ul class="exp-pts">
+          <li>Mapped current-state and designed target-state processes for client onboarding, trade processing, and KYC/AML compliance using Visio.</li>
+          <li>Designed operational dashboards tracking exception rates, SLA adherence, and trade volumes across ERP and CRM systems.</li>
+          <li>Coordinated UAT cycles, authored test plans, and led BAU transition with user training — ensuring post-deployment compliance and adoption.</li>
+        </ul>
+        <div class="tags"><span class="tag">Microsoft Visio</span><span class="tag">KYC/AML</span><span class="tag">UAT</span><span class="tag">KPI Dashboards</span><span class="tag">BAU Transition</span></div>
+      </div>
+    </div></div></div>
+  </div>
+</section>
+
+<!-- ══════ SKILLS ══════ -->
+<section class="section" id="skills">
+  <div class="sec-hdr fade"><span class="sec-num">02</span><span class="sec-ttl">Core Skills</span><div class="sec-line"></div></div>
+  <div class="skills-grid">
+    <div class="sk-card fade"><div class="sk-top"><div class="sk-ico">📋</div><div class="sk-name">Business Analysis</div></div><div class="pills"><span class="pill">BRD/FRD</span><span class="pill">User Stories</span><span class="pill">Acceptance Criteria</span><span class="pill">As-Is/To-Be</span><span class="pill">Gap Analysis</span><span class="pill">Root Cause Analysis</span><span class="pill">Process Optimization</span><span class="pill">MS Visio</span></div></div>
+    <div class="sk-card fade" style="transition-delay:.05s"><div class="sk-top"><div class="sk-ico">🏛️</div><div class="sk-name">Data Governance & Quality</div></div><div class="pills"><span class="pill">Data Dictionary</span><span class="pill">Quality Controls</span><span class="pill">Lineage Tracking</span><span class="pill">Feed Governance</span><span class="pill">Reconciliation</span><span class="pill">Data Profiling</span><span class="pill">Data Mapping</span><span class="pill">Data Integrity</span></div></div>
+    <div class="sk-card fade" style="transition-delay:.1s"><div class="sk-top"><div class="sk-ico">📊</div><div class="sk-name">Financial & Regulatory</div></div><div class="pills"><span class="pill">Regulatory Reporting</span><span class="pill">Variance Analysis</span><span class="pill">Budgeting & Forecasting</span><span class="pill">Financial Products</span><span class="pill">KPI Development</span><span class="pill">Performance Reporting</span></div></div>
+    <div class="sk-card fade" style="transition-delay:.15s"><div class="sk-top"><div class="sk-ico">🔬</div><div class="sk-name">UAT & Testing</div></div><div class="pills"><span class="pill">UAT Planning</span><span class="pill">Test Strategy</span><span class="pill">Test Plans & Cases</span><span class="pill">Defect Tracking</span><span class="pill">Regression Testing</span><span class="pill">Metrics Tracking</span><span class="pill">BAU Transition</span></div></div>
+    <div class="sk-card fade" style="transition-delay:.2s"><div class="sk-top"><div class="sk-ico">⚙️</div><div class="sk-name">Data & Analytics Tools</div></div><div class="pills"><span class="pill">SQL/T-SQL (Advanced)</span><span class="pill">Python · Pandas</span><span class="pill">Snowflake</span><span class="pill">Excel (Advanced)</span><span class="pill">ETL/SSIS</span><span class="pill">Data Modeling</span></div></div>
+    <div class="sk-card fade" style="transition-delay:.25s"><div class="sk-top"><div class="sk-ico">📈</div><div class="sk-name">BI & Visualization</div></div><div class="pills"><span class="pill">Power BI · DAX</span><span class="pill">Tableau</span><span class="pill">Looker Studio</span><span class="pill">SSRS</span><span class="pill">Dashboard Development</span><span class="pill">KPI Reporting</span></div></div>
+  </div>
+  <div class="prof-block fade" style="transition-delay:.1s">
+    <div class="prof-ttl">Proficiency Overview</div>
+    <div class="prof-row"><div class="prof-lbl">Business Analysis</div><div class="prof-trk"><div class="prof-fill" data-w="95"></div></div><div class="prof-pct">95%</div></div>
+    <div class="prof-row"><div class="prof-lbl">Data Governance</div><div class="prof-trk"><div class="prof-fill" data-w="92"></div></div><div class="prof-pct">92%</div></div>
+    <div class="prof-row"><div class="prof-lbl">SQL / Analytics</div><div class="prof-trk"><div class="prof-fill" data-w="90"></div></div><div class="prof-pct">90%</div></div>
+    <div class="prof-row"><div class="prof-lbl">BI & Visualization</div><div class="prof-trk"><div class="prof-fill" data-w="86"></div></div><div class="prof-pct">86%</div></div>
+    <div class="prof-row"><div class="prof-lbl">UAT & Testing</div><div class="prof-trk"><div class="prof-fill" data-w="88"></div></div><div class="prof-pct">88%</div></div>
+    <div class="prof-row"><div class="prof-lbl">Project Management</div><div class="prof-trk"><div class="prof-fill" data-w="84"></div></div><div class="prof-pct">84%</div></div>
+  </div>
+</section>
+
+<!-- ══════ EDUCATION ══════ -->
+<section class="section alt" id="education">
+  <div class="sec-hdr fade"><span class="sec-num">03</span><span class="sec-ttl">Education</span><div class="sec-line"></div></div>
+  <div class="edu-grid">
+    <div class="edu-card fade"><div class="edu-type">Master of Science</div><div class="edu-deg">Information Systems</div><div class="edu-sch">New Jersey Institute of Technology</div><div class="edu-loc">Newark, NJ · USA</div></div>
+    <div class="edu-card fade" style="transition-delay:.1s"><div class="edu-type">Bachelor of Engineering</div><div class="edu-deg">Information Technology</div><div class="edu-sch">University of Mumbai</div><div class="edu-loc">Mumbai · India</div></div>
+  </div>
+</section>
+
+<!-- ══════ CONTACT ══════ -->
+<section class="contact-section" id="contact">
+  <div class="contact-grid">
+    <div class="fade">
+      <h2>Ready to build something<br><em>well-governed</em> together?</h2>
+      <p>Open to senior BA, product owner, or data governance roles. I bring precision, clarity, and cross-functional credibility from process design through C-suite delivery.</p>
+      <div class="cta-row">
+        <a href="mailto:divyamsinghcareer39@gmail.com" class="cta-primary">✉ Send Email</a>
+        <a href="#" target="_blank" class="cta-ghost">🔗 LinkedIn</a>
+      </div>
+    </div>
+    <div class="contact-right fade" style="transition-delay:.1s">
+      <a href="tel:+13152666735" class="ci"><div class="ci-ico">📞</div><div><div class="ci-lbl">Phone</div><div class="ci-val">+1 (315) 266-6735</div></div></a>
+      <a href="mailto:divyamsinghcareer39@gmail.com" class="ci"><div class="ci-ico">✉️</div><div><div class="ci-lbl">Email</div><div class="ci-val">divyamsinghcareer39@gmail.com</div></div></a>
+      <a href="#" target="_blank" class="ci"><div class="ci-ico">🔗</div><div><div class="ci-lbl">LinkedIn</div><div class="ci-val">Add your LinkedIn URL</div></div></a>
+      <a href="#" class="ci"><div class="ci-ico">📍</div><div><div class="ci-lbl">Location</div><div class="ci-val">Santa Clara, CA</div></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ PUBLISH GUIDE ══════ -->
+<section class="publish-section" id="publish">
+  <div class="sec-hdr fade"><span class="sec-num">🚀</span><span class="sec-ttl">Publish & Share Your Portfolio</span><div class="sec-line"></div></div>
+  <p style="font-size:0.85rem;color:var(--muted);max-width:600px;margin-bottom:0.5rem;">Get a free live link you can add to your LinkedIn, resume, and share directly with recruiters — in under 5 minutes.</p>
+
+  <div class="publish-grid fade">
+
+    <!-- GitHub Pages -->
+    <div class="pub-card">
+      <div class="pub-header">
+        <div class="pub-icon gh">🐙</div>
+        <div><div class="pub-title">GitHub Pages</div><div class="pub-subtitle">Free · yourname.github.io</div></div>
+      </div>
+      <div class="pub-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Go to <a href="https://github.com" target="_blank">github.com</a> → Sign up free → Click <strong>New Repository</strong></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Name it exactly: <code>yourusername.github.io</code> → Set to <strong>Public</strong> → Create</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Click <strong>Upload files</strong> → drag this <code>divyam_singh_portfolio.html</code> file → rename it to <code>index.html</code></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">Go to <strong>Settings → Pages</strong> → Source: <strong>main branch</strong> → Save. Your site is live in ~60 seconds!</div></div>
+        <div class="copy-url-row">
+          <span class="copy-url-text">https://divyamsingh.github.io</span>
+          <button class="copy-url-btn" onclick="copyText('https://divyamsingh.github.io')">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- LinkedIn -->
+    <div class="pub-card">
+      <div class="pub-header">
+        <div class="pub-icon li">💼</div>
+        <div><div class="pub-title">Add to LinkedIn</div><div class="pub-subtitle">Featured section + About</div></div>
+      </div>
+      <div class="pub-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Go to your <a href="https://linkedin.com/in/" target="_blank">LinkedIn profile</a> → Click <strong>Add profile section</strong></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Under <strong>Recommended</strong> → click <strong>Add featured</strong> → select <strong>Links</strong></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Paste your GitHub Pages URL → Add title: <em>"My Professional Portfolio"</em> → Save</div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">Also paste the link in your <strong>About / Summary</strong> section so recruiters see it immediately</div></div>
+        <div class="copy-url-row">
+          <span class="copy-url-text" id="linkedinUrl">linkedin.com/in/your-profile</span>
+          <button class="copy-url-btn" onclick="copyText(document.getElementById('linkedinUrl').textContent)">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Share with Recruiters -->
+    <div class="share-link-card fade">
+      <div class="share-link-info">
+        <h4>📨 Share Directly with Recruiters</h4>
+        <p>Once published, copy your portfolio link and include it in your resume header, email signature, and recruiter messages. A single link gives them your full story — far more powerful than a PDF alone.</p>
+        <p style="margin-top:0.5rem;font-size:0.72rem;color:var(--teal);">💡 Tip: Add <strong>"Portfolio: yourname.github.io"</strong> right below your name on your resume for maximum visibility.</p>
+      </div>
+      <div class="share-link-btns">
+        <a href="https://github.com/new" target="_blank" class="slb primary">⬆ Start on GitHub</a>
+        <button class="slb outline" onclick="downloadPortfolio()">⬇ Download HTML</button>
+        <button class="slb outline" onclick="copyPortfolioLink()">📋 Copy Link</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="footer">
+  <div class="footer-copy">© 2025 Divyam Singh · Senior Business Analyst · Finance & Data Governance</div>
+  <div class="footer-brand">divyamsingh.github.io</div>
+</div>
+
+<script>
+// Accordion
+function toggleAcc(hdr){
+  const item=hdr.closest('.acc-item');
+  const open=item.classList.contains('open');
+  document.querySelectorAll('.acc-item').forEach(i=>i.classList.remove('open'));
+  if(!open)item.classList.add('open');
+}
+
+// Scroll progress + nav active
+const fill=document.getElementById('sprogFill');
+const navLinks=document.querySelectorAll('.tb-nav a');
+const sections=document.querySelectorAll('[id]');
+window.addEventListener('scroll',()=>{
+  const pct=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;
+  fill.style.width=pct+'%';
+  let cur='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-90)cur=s.id;});
+  navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
+});
+
+// Fade + proficiency
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      e.target.querySelectorAll('.prof-fill').forEach(b=>{b.style.width=b.dataset.w+'%';});
+    }
+  });
+},{threshold:0.08});
+document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+
+// Photo upload
+document.getElementById('photo-input').addEventListener('change',function(){
+  if(!this.files[0])return;
+  const r=new FileReader();
+  r.onload=e=>{
+    const img=document.getElementById('photoImg');
+    img.src=e.target.result;img.style.display='block';
+    document.getElementById('photoIcon').style.display='none';
+  };
+  r.readAsDataURL(this.files[0]);
+});
+
+// Copy helpers
+function copyText(txt){
+  navigator.clipboard.writeText(txt).then(()=>{showToast('Copied!');}).catch(()=>{showToast('Copy: '+txt);});
+}
+function copyPortfolioLink(){copyText('https://divyamsingh.github.io');}
+
+function downloadPortfolio(){
+  const a=document.createElement('a');
+  a.href=window.location.href;
+  a.download='divyam_singh_portfolio.html';
+  a.click();
+}
+
+function showToast(msg){
+  let t=document.getElementById('toast');
+  if(!t){t=document.createElement('div');t.id='toast';t.style.cssText='position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:#0b1f35;color:#fff;padding:0.65rem 1.4rem;border-radius:8px;font-size:0.75rem;font-weight:600;z-index:9999;border:1px solid rgba(8,145,178,0.4);box-shadow:0 4px 20px rgba(0,0,0,0.3);transition:opacity 0.3s;';document.body.appendChild(t);}
+  t.textContent=msg;t.style.opacity='1';
+  clearTimeout(t._timer);t._timer=setTimeout(()=>{t.style.opacity='0';},2200);
+}
+</script>
+</body>
+</html>
